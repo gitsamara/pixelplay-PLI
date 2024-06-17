@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPlay</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav>
+            <section class="cabecalho_1">
+                <div class="cabecalho_titulo">
+                    <h1>PixelPlay</h1>
+                </div>
+                <div class="cabecalho_menu">
+                    <a href="#">About</a>
+                    <a href="#">Features</a>
+                    <a href="#">Develop</a>
+                    <a href="#">Community</a>
+                    <a href="#">Blog</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+                <div class="cabecalho_regist">
+                    <a href="#">Login</a>
+                    <button>Register</button>
+                    <img src="./assets/config.png" alt="img-config">
+                </div>
+            </section>
+            <section class="cabecalho_2">
+                <input type="text" name="q" placeholder="Search">
+                <button>Sort By</button>
+                <button><img src="./assets/Grid.png" alt=""></button>
+                <button><img src="./assets/List.png" alt=""></button>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu_lateral">
+            <div class="menu_titulo">
+                <h1>Category</h1>
+            </div>
+            <div class="menu_categorias1">
+                <div class="ladoA">
+                    <p>All categories</p>
+                    <p>Category A</p>
+                    <p>Category B</p>
+                    <p>Category C</p>
+                    <p>Category D</p>
+                    <p>Category E</p>
+                    <p>Category F</p>
+                </div>
+                <div id="ladoB">
+                    <p>(2456)</p>
+                    <p>(141)</p>
+                    <p>(456)</p>
+                    <p>(789)</p>
+                    <p>(101)</p>
+                    <p>(123)</p>
+                    <p>(522)</p>
+                </div>
+            </div>
+            <div class="menu_titulo">
+                <h1>Filter Check</h1>
+            </div>
+            <div class="menu_categorias2">
+                <p>
+                    <label>
+                        <input type="checkbox" name="categories" value="all">
+                        All categories
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="categories" value="a">
+                        Category A 
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="categories" value="b">
+                        Category B 
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="categories" value="c">
+                        Category C 
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="categories" value="d">
+                        Category D 
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="categories" value="e">
+                        Category E
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="categories" value="f">
+                        Category F 
+                    </label>
+                </p>
+            </div>
+        </section>
+        <section class="games_vitrine">
+            <div>
+                <img src="./assets/zelda.png" alt="imagem jogo">
+                <p><a href="#">Zelda</a></p>
+                <p>9x de R$ 51,80 sem juros</p>
+                <p>Código: UYJSSE4MB</p>
+                <button onclick="addToCart({ id: 2, name: 'Zelda', price: 518.00, image: './assets/zelda.png' })">ADD TO CART</button>
+            </div>
+            <div>
+                <img src="./assets/jedi.png" alt="imagem jogo">
+                <p><a href="#">Jedi Fallen Order</a></p>
+                <p>9x de R$ 31,02 sem juros</p>
+                <p>Código: LUYCGNA6U</p>
+                <button onclick="addToCart({ id: 3, name: 'Jedi Fallen Order', price: 279.18, image: './assets/jedi.png' })">ADD TO CART</button>
+            </div>
+            <div>
+                <img src="./assets/diablo.png" alt="imagem jogo">
+                <p><a href="#">Diablo IV</a></p>
+                <p>9x de R$ 72,79 sem juros</p>
+                <p>Código: T53XA9JMP</p>
+                <button onclick="addToCart({ id: 4, name: 'Diablo IV', price: 655.11, image: './assets/diablo.png' })">ADD TO CART</button>
+            </div>
+            <div>
+                <img src="./assets/mario.png" alt="imagem jogo">
+                <p><a href="#">Super Mario Odyssey</a></p>
+                <p>9x de R$ 39,60 sem juros</p>
+                <p>Código: G4RBH3VPU</p>
+                <button onclick="addToCart({ id: 5, name: 'Super Mario Odyssey', price: 356.40, image: './assets/mario.png' })">ADD TO CART</button>
+            </div>
+            <div>
+                <img src="./assets/duty.png" alt="imagem jogo">
+                <p><a href="#">Call Of Duty</a></p>
+                <p>9x de R$ 38,43 sem juros</p>
+                <p>Código: WDAXE67M9</p>
+                <button onclick="addToCart({ id: 6, name: 'Call Of Duty', price: 345.87, image: './assets/duty.png' })">ADD TO CART</button>
+            </div>
+            <div>
+                <img src="./assets/bomberman.png" alt="imagem jogo">
+                <p><a href="#">Bomberman</a></p>
+                <p>9x de R$ 27,33 sem juros</p>
+                <p>Código: TNN6TCVXK</p>
+                <button onclick="addToCart({ id: 7, name: 'Bomberman', price: 245.97, image: './assets/bomberman.png' })">ADD TO CART</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <section>
+            <p>PixelPlay</p>
+            <p>Descubra o universo dos games na Pixel Play! Com uma seleção cuidadosa de jogos, consoles e acessórios, estamos aqui para transformar sua experiência de jogar. Junte-se à nossa comunidade e mergulhe em novas aventuras todos os dias!</p>
+            <p>© PixelPlay Theme 2024</p>
+        </section>
+        <section>
+            <div>
+                <a href="#">INSTITUCIONAL</a>
+                <p>Sobre</p>
+                <p>Segurança</p>
+                <p>Seu jogo na PixelPlay</p>
+            </div>
+            <div>
+                <a href="#">AJUDA</a>
+                <p>Termos de Uso</p>
+                <p>Política de Privacidade</p>
+                <p>Suporte</p>
+            </div>
+            <div>
+                <a href="#">RECURSOS</a>
+                <p>Serviços Online</p>
+                <p>Distribuidores</p>
+                <p>Novidades</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <img src="./assets/face.png" alt="icone face">
+                <img src="./assets/linkedin.png" alt="icone linkedin">
+                <img src="./assets/twitter.png" alt="icone twitter">
+                <img src="./assets/insta.png" alt="icone insta">
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Selecione o idioma</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('pt')">Português</a>
+                    <a href="#" onclick="changeLanguage('en')">Inglês</a>
+                    <a href="#" onclick="changeLanguage('es')">Espanhol</a>
+                    <a href="#" onclick="changeLanguage('fr')">Francês</a>
+                    <a href="#" onclick="changeLanguage('de')">Alemão</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

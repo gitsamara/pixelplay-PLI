@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body id="cart-page">
+    <header class="cabecalho">
+        <nav>
+            <section class="cabecalho_1">
+                <div class="cabecalho_titulo">
+                    <h1>PixelPlay Cart</h1>
+                </div>
+                <div class="cabecalho_menu">
+                    <a href="index.html">Back to Shop</a>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Shopping Cart</h2>
+            <div class="cart-itens"></div>
+            <p id="totalPrice">Total: R$ 0.00</p>
+            <button onclick="clearCart()">Clear Cart</button>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <section>
+            <p>PixelPlay</p>
+            <p>Descubra o universo dos games na Pixel Play! Com uma seleção cuidadosa de jogos, consoles e acessórios, estamos aqui para transformar sua experiência de jogar. Junte-se à nossa comunidade e mergulhe em novas aventuras todos os dias!</p>
+            <p>© PixelPlay Theme 2024</p>
+        </section>
+        <section>
+            <div>
+                <a href="#">INSTITUCIONAL</a>
+                <p>Sobre</p>
+                <p>Segurança</p>
+                <p>Seu jogo na PixelPlay</p>
+            </div>
+            <div>
+                <a href="#">AJUDA</a>
+                <p>Termos de Uso</p>
+                <p>Política de Privacidade</p>
+                <p>Suporte</p>
+            </div>
+            <div>
+                <a href="#">RECURSOS</a>
+                <p>Serviços Online</p>
+                <p>Distribuidores</p>
+                <p>Novidades</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <img src="./assets/face.png" alt="icone face">
+                <img src="./assets/linkedin.png" alt="icone linkedin">
+                <img src="./assets/twitter.png" alt="icone twitter">
+                <img src="./assets/insta.png" alt="icone insta">
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Selecione o idioma</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('pt')">Português</a>
+                    <a href="#" onclick="changeLanguage('en')">Inglês</a>
+                    <a href="#" onclick="changeLanguage('es')">Espanhol</a>
+                    <a href="#" onclick="changeLanguage('fr')">Francês</a>
+                    <a href="#" onclick="changeLanguage('de')">Alemão</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
