@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelPlay</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <script defer src="script.js"></script>
 </head>
+
 <body>
     <header class="cabecalho">
         <nav>
@@ -25,14 +28,14 @@
                 <div class="cabecalho_regist">
                     <a href="#">Login</a>
                     <button>Register</button>
-                    <img src="./assets/config.png" alt="img-config">
+                    <img src="./assets/config.png" alt="img-config" style="width: 20px; height: 20px;">
                 </div>
             </section>
             <section class="cabecalho_2">
                 <input type="text" name="q" placeholder="Search">
                 <button>Sort By</button>
-                <button><img src="./assets/Grid.png" alt=""></button>
-                <button><img src="./assets/List.png" alt=""></button>
+                <button><img src="./assets/Grid.png" alt="" style="width: 10px; height: 10px;"></button>
+                <button><img src="./assets/List.png" alt="" style="width: 10px; height: 10px;"></button>
             </section>
         </nav>
     </header>
@@ -75,25 +78,25 @@
                 <p>
                     <label>
                         <input type="checkbox" name="categories" value="a">
-                        Category A 
+                        Category A
                     </label>
                 </p>
                 <p>
                     <label>
                         <input type="checkbox" name="categories" value="b">
-                        Category B 
+                        Category B
                     </label>
                 </p>
                 <p>
                     <label>
                         <input type="checkbox" name="categories" value="c">
-                        Category C 
+                        Category C
                     </label>
                 </p>
                 <p>
                     <label>
                         <input type="checkbox" name="categories" value="d">
-                        Category D 
+                        Category D
                     </label>
                 </p>
                 <p>
@@ -105,53 +108,94 @@
                 <p>
                     <label>
                         <input type="checkbox" name="categories" value="f">
-                        Category F 
+                        Category F
                     </label>
                 </p>
             </div>
         </section>
         <section class="games_vitrine">
+            <section id="carrossel">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="project-img">
+                                <img src="./assets/zelda_car.jpeg" alt="zelda">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-img">
+                                <img src="./assets/mario_car.avif" alt="mario">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-img">
+                                <img src="./assets/finalfant_car.jpeg" alt="ff7">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-img">
+                                <img src="./assets/cod_car.jpeg" alt="cod">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
             <div>
                 <img src="./assets/zelda.png" alt="imagem jogo">
                 <p><a href="#">Zelda</a></p>
                 <p>9x de R$ 51,80 sem juros</p>
                 <p>Código: UYJSSE4MB</p>
-                <button onclick="addToCart({ id: 2, name: 'Zelda', price: 518.00, image: './assets/zelda.png' })">ADD TO CART</button>
+                <button onclick="addToCart({ id: 2, name: 'Zelda', price: 518.00, image: './assets/zelda.png' })">ADD TO
+                    CART</button>
             </div>
             <div>
                 <img src="./assets/jedi.png" alt="imagem jogo">
                 <p><a href="#">Jedi Fallen Order</a></p>
                 <p>9x de R$ 31,02 sem juros</p>
                 <p>Código: LUYCGNA6U</p>
-                <button onclick="addToCart({ id: 3, name: 'Jedi Fallen Order', price: 279.18, image: './assets/jedi.png' })">ADD TO CART</button>
+                <button
+                    onclick="addToCart({ id: 3, name: 'Jedi Fallen Order', price: 279.18, image: './assets/jedi.png' })">ADD
+                    TO CART</button>
             </div>
             <div>
                 <img src="./assets/diablo.png" alt="imagem jogo">
                 <p><a href="#">Diablo IV</a></p>
                 <p>9x de R$ 72,79 sem juros</p>
                 <p>Código: T53XA9JMP</p>
-                <button onclick="addToCart({ id: 4, name: 'Diablo IV', price: 655.11, image: './assets/diablo.png' })">ADD TO CART</button>
+                <button
+                    onclick="addToCart({ id: 4, name: 'Diablo IV', price: 655.11, image: './assets/diablo.png' })">ADD
+                    TO CART</button>
             </div>
             <div>
                 <img src="./assets/mario.png" alt="imagem jogo">
                 <p><a href="#">Super Mario Odyssey</a></p>
                 <p>9x de R$ 39,60 sem juros</p>
                 <p>Código: G4RBH3VPU</p>
-                <button onclick="addToCart({ id: 5, name: 'Super Mario Odyssey', price: 356.40, image: './assets/mario.png' })">ADD TO CART</button>
+                <button
+                    onclick="addToCart({ id: 5, name: 'Super Mario Odyssey', price: 356.40, image: './assets/mario.png' })">ADD
+                    TO CART</button>
             </div>
             <div>
                 <img src="./assets/duty.png" alt="imagem jogo">
                 <p><a href="#">Call Of Duty</a></p>
                 <p>9x de R$ 38,43 sem juros</p>
                 <p>Código: WDAXE67M9</p>
-                <button onclick="addToCart({ id: 6, name: 'Call Of Duty', price: 345.87, image: './assets/duty.png' })">ADD TO CART</button>
+                <button
+                    onclick="addToCart({ id: 6, name: 'Call Of Duty', price: 345.87, image: './assets/duty.png' })">ADD
+                    TO CART</button>
             </div>
             <div>
                 <img src="./assets/bomberman.png" alt="imagem jogo">
                 <p><a href="#">Bomberman</a></p>
                 <p>9x de R$ 27,33 sem juros</p>
                 <p>Código: TNN6TCVXK</p>
-                <button onclick="addToCart({ id: 7, name: 'Bomberman', price: 245.97, image: './assets/bomberman.png' })">ADD TO CART</button>
+                <button
+                    onclick="addToCart({ id: 7, name: 'Bomberman', price: 245.97, image: './assets/bomberman.png' })">ADD
+                    TO CART</button>
             </div>
         </section>
     </main>
@@ -159,7 +203,9 @@
     <footer class="rodape">
         <section>
             <p>PixelPlay</p>
-            <p>Descubra o universo dos games na Pixel Play! Com uma seleção cuidadosa de jogos, consoles e acessórios, estamos aqui para transformar sua experiência de jogar. Junte-se à nossa comunidade e mergulhe em novas aventuras todos os dias!</p>
+            <p>Descubra o universo dos games na Pixel Play! Com uma seleção cuidadosa de jogos, consoles e acessórios,
+                estamos aqui para transformar sua experiência de jogar. Junte-se à nossa comunidade e mergulhe em novas
+                aventuras todos os dias!</p>
             <p>© PixelPlay Theme 2024</p>
         </section>
         <section>
@@ -202,4 +248,7 @@
         </section>
     </footer>
 </body>
+
 </html>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

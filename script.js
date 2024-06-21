@@ -1,14 +1,12 @@
-// script.js
-
 // Função para formatar números em reais (R$)
 function formatCurrency(value) {
     return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
 }
 
-// Função que exibe o carrinho
+// Função para exibir o carrinho
 function displayCart() {
-    var cartElement = document.querySelector('.cart-itens'); // Acessa o elemento com a classe 'cart-itens'
-    
+    const cartElement = document.querySelector('.cart-itens');
+
     // Verifica se o elemento foi encontrado
     if (cartElement !== null) {
         let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
@@ -16,6 +14,7 @@ function displayCart() {
         
         if (cart.length === 0) {
             cartElement.innerHTML = 'Seu carrinho está vazio'; // Define o conteúdo do carrinho vazio
+            updateCartTotal(cart); // Atualiza o total para zero
         } else {
             cartElement.innerHTML = cart.map(item => `
                 <div class="cart-item">
@@ -34,12 +33,15 @@ function displayCart() {
 }
 
 // Função para atualizar o total do carrinho
-function updateCartTotal(cartItems) {
-    let total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-    let cartTotalElement = document.getElementById('totalPrice');
-    if (cartTotalElement !== null) {
-        cartTotalElement.textContent = `Total: ${formatCurrency(total)}`;
-    }
+function updateCartTotal(cart) {
+    const totalPriceElement = document.getElementById('totalPrice');
+    let total = 0;
+
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+    });
+
+    totalPriceElement.textContent = `Total: ${formatCurrency(total)}`;
 }
 
 // Função para adicionar um item ao carrinho
@@ -54,7 +56,8 @@ function addToCart(item) {
     }
 
     sessionStorage.setItem('cart', JSON.stringify(cart));
-    console.log('Item added to cart:', item); // Adiciona log para verificação
+    console.log('Item adicionado ao carrinho', item); // Adiciona log para verificação
+    alert('Item adicionado ao carrinho');
 }
 
 // Função para remover um item do carrinho
@@ -63,18 +66,19 @@ function removeFromCart(itemId) {
     let updatedCart = cart.filter(item => item.id !== itemId);
     sessionStorage.setItem('cart', JSON.stringify(updatedCart));
     displayCart(); // Atualiza o carrinho na interface após remover o item
+    alert('Item removido do carrinho');
 }
 
 // Função para limpar o carrinho
 function clearCart() {
     sessionStorage.removeItem('cart');
     displayCart(); // Atualiza o carrinho na interface após limpar o carrinho
+    alert('Você não possui mais itens no carrinho');
 }
 
 // Função para finalizar a compra (simulação)
 function checkout() {
-    // Aqui você pode implementar a lógica real de checkout, por exemplo, redirecionar para uma página de pagamento.
-    alert('Checkout functionality would be implemented here.');
+    alert('a funcionalidade de checkout ainda não foi implementada :)');
 }
 
 // Carrega o carrinho ao carregar a página
@@ -83,3 +87,20 @@ window.onload = function() {
         displayCart();
     }
 };
+
+// Chamada inicial para exibir o carrinho na carga da página
+displayCart();
+
+//Carossel
+const swiper = new Swiper(".swiper", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    keyboard: true,
+  });

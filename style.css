@@ -1,3 +1,13 @@
+a {
+    text-decoration: none;
+    color: #651FFF;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #D1C4E9;
+}
+
 body {    
     font-family: Arial, sans-serif;
     margin: 0;
@@ -160,3 +170,67 @@ body {
 .dropdown:hover .dropbtn {
     background-color: #651FFF;
 }
+
+#cart-page {
+    padding: 50px;
+}
+
+#carrossel {
+    height: 100vh;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+    span {
+        font-size: x-large;
+    }
+    
+    img {
+        box-shadow: 0 1px 2px #0003;
+        width: 100%;
+    }
+    
+    .project-img {
+        position: relative;
+      }
+      
+    .project-img img {
+        width: 70%;
+        height: auto;
+      }
+      
+    .overlay-text {
+        position: absolute;
+        bottom: 80px;
+        left: 80px;
+        right: 80px;
+        color: white;
+        font-size: 30px;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+    
+    .swiper {
+        height: 500px;
+        border-radius: 10px;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @media (max-width: 450px) {
+        .swiper {
+            height: 270px;
+        }
+    }
+}
+
+
